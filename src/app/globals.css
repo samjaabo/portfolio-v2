@@ -1,26 +1,168 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-primary: #0ff0fc;       /* Neon cyan */
+  --color-secondary: #ff00ff;     /* Neon magenta */
+  --color-bg: #0d0d0d;            /* Very dark gray/black */
+  --color-text: #e0e0ff;          /* Soft light text */
+  --color-text-secondary: #7f7fff; /* Cool secondary text */
+  --color-border: #1a1a2e;        /* Dark bluish border */
+  
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar but maintain functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Custom transitions */
+a, button {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth image rendering */
+img {
+  image-rendering: optimizeQuality;
+}
+
+/* Custom underline animation */
+.hover-underline {
+  position: relative;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Fade in animation for scrolling content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+ 
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.section-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.project-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Glass effect utilities */
+.glass {
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background-color: rgba(26, 26, 26, 0.1);
+  border: 1px solid rgba(26, 26, 26, 0.2);
+}
+
+.glass-card {
+  backdrop-filter: blur(16px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass-card {
+  background-color: rgba(26, 26, 26, 0.1);
+  border: 1px solid rgba(26, 26, 26, 0.2);
+}
+
+/* Utilities */
+.text-gradient {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in-out;
 }
