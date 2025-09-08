@@ -1,11 +1,12 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { Metadata } from "next";
 
-const inter = Inter({
+import { Metadata } from "next";
+import { Kode_Mono } from "next/font/google";
+
+const kodeMono = Kode_Mono({
   subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
+  variable: "--font-kode-mono",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html
+      lang="en"
+      className={` ${kodeMono.variable} font-normal text-sm text-color antialiased`}
+    >
       <body>{children}</body>
     </html>
   );
