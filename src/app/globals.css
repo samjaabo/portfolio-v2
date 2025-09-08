@@ -33,6 +33,8 @@
   --font-lora: var(--font-lora), serif;
   --font-kode-mono: var(--font-kode-mono), monospace;
   --font-sans: var(--font-kode-mono), monospace;
+
+  
 }
 
 /* ----------------- Base ----------------- */
@@ -40,12 +42,6 @@
   html {
     scroll-behavior: smooth;
     color-scheme: light;
-  }
-
-  body {
-    @apply bg-bg text-color font-sans;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
   }
 
   ::-webkit-scrollbar { width: 0; background: transparent; }

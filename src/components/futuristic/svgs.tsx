@@ -1,16 +1,17 @@
 export function CardBottomContainer() {
   return (
     <svg
+      className="absolute -bottom-4 md:-bottom-8 right-0 z-0 w-auto h-4 md:h-8"
       width="100%"
-      viewBox="0 0 389 78"
+      viewBox="0 0 224 37.5"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M389 10C389 4.47715 384.523 0 379 0H10C4.47715 0 0 4.47715 0 10V30C0 35.5228 4.47714 40 9.99999 40H170.507C173.499 40 176.334 41.3395 178.233 43.6509L203.05 73.8491C204.949 76.1605 207.784 77.5 210.776 77.5L379 77.5C384.523 77.5 389 73.0228 389 67.5V40V38.5V10Z"
-        fill="var(--soft)"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M224 0V27.5c0 5.5-4.5 10-10 10H45.8c-3 0-5.8-1.3-7.7-3.7L13.2 3.7C11.3 1.3 8.5 0 5.5 0H224 0s0 0 224 0z"
+        fill="var(--color-soft)"
       ></path>
     </svg>
   );

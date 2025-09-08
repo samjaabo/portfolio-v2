@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={` ${kodeMono.variable} font-normal text-sm text-color antialiased`}
+      className={` ${kodeMono.variable} font-normal bg-white text-sm text-color antialiased`}
     >
       <body>{children}</body>
     </html>
