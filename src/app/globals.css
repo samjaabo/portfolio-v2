@@ -34,6 +34,7 @@
   --font-kode-mono: var(--font-kode-mono), monospace;
   --font-sans: var(--font-kode-mono), monospace;
 
+  --animate-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
   
 }
 

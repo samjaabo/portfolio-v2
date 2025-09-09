@@ -1,16 +1,16 @@
 export function CardBottomContainer() {
   return (
     <svg
-      className="absolute -bottom-4 md:-bottom-8 right-0 z-0 w-auto h-4 md:h-8"
+      className="absolute -bottom-4 lg:-bottom-8 right-0 z-0 w-1/2 h-auto "
       width="100%"
-      viewBox="0 0 224 37.5"
+      viewBox="0 0 228 38"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M224 0V27.5c0 5.5-4.5 10-10 10H45.8c-3 0-5.8-1.3-7.7-3.7L13.2 3.7C11.3 1.3 8.5 0 5.5 0H224 0s0 0 224 0z"
+        d="M228 0V28c0 5.5-4.5 10-10 10H46c-3 0-5.8-1.3-7.7-3.7L13.2 3.7C11.3 1.3 8.5 0 5.5 0H228 0s0 0 228 0z"
         fill="var(--color-soft)"
       ></path>
     </svg>
@@ -54,16 +54,16 @@ export function FullCard() {
 export function NavbarContainer() {
   return (
     <svg
-      className="absolute w-full max-h-12 inset-0 z-1 -top-2 hidden md:block pointer-events-none"
+      className="absolute w-full h-20 lg:max-h-12 lg:left-1/2 lg:-translate-x-1/2 z-1 lg:-top-2 pointer-events-none hidden lg:block"
       width="100%"
-      viewBox="0 0 1880 87"
+      viewBox="0 0 879 87"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M 1379 0 L 1379 0 L 1301.43 75.3991 C 1293.78 82.8382 1283.53 87 1272.86 87 H 942 H 938 H 607.144 C 596.471 87 586.219 82.8382 578.566 75.3991 L 533.509 31.6009 L 500 0 H 500 H 938 H 942 H 1379 Z"
+        d="M879 0H442h-4H0L33.509 31.6009 78.566 75.3991C86.219 82.8382 96.471 87 107.144 87H438h4H772.86c10.67 0 20.92-4.1618 28.57-11.6009L879 0Z"
         fill="var(--color-white)"
       ></path>
     </svg>
@@ -72,16 +72,16 @@ export function NavbarContainer() {
 export function NavbarContainerRounded() {
   return (
     <svg
-      className="absolute h-16 inset-0 z-1 hidden md:block mx-auto"
+      className="absolute h-20 w-20  z-1 top-0 left-0 pointer-events-none hidden max-lg:block"
       width="100%"
-      viewBox="0 0 1880 87"
+      viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M 1379 20 V 20 V 20 H 1375.07 C 1364.4 20 1354.14 24.1618 1346.49 31.6009 L 1301.43 75.3991 C 1293.78 82.8382 1283.53 87 1272.86 87 H 942 H 938 H 607.144 C 596.471 87 586.219 82.8382 578.566 75.3991 L 533.509 31.6009 C 525.856 24.1618 515.604 20 504.931 20 H 501 V 20 V 20 H 516 H 938 H 942 H 1379 Z"
+        d="M88 15V77c0 6-3 10-14 10H60 25C7 87 0 85 0 100V0H95h4C95 0 88 0 88 10Z"
         fill="var(--color-white)"
       ></path>
     </svg>
