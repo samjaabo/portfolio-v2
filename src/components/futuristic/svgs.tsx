@@ -16,6 +16,24 @@ export function CardBottomContainer() {
     </svg>
   );
 }
+export function SmallCardBottomContainer() {
+  return (
+    <svg
+      className="absolute -bottom-4  right-0 z-0 w-1/2 h-auto "
+      width="100%"
+      viewBox="0 0 228 38"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M228 0V28c0 5.5-4.5 10-10 10H46c-3 0-5.8-1.3-7.7-3.7L13.2 3.7C11.3 1.3 8.5 0 5.5 0H228 0s0 0 228 0z"
+        fill="var(--color-soft)"
+      ></path>
+    </svg>
+  );
+}
 
 export function CardTopContainer() {
   return (
