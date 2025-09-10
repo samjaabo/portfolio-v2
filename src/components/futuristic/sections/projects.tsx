@@ -4,7 +4,7 @@ import { SmallCardBottomContainer } from "../svgs";
 export default function ProjectsSection() {
   return (
     <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit px-5 bg-transparent border-line-color-soft">
-      <div className="relative flex max-sm:flex-col w-full px-4 py-32 lg:px-8 gap-8 ">
+      <div className="relative left-0 top-0 flex max-sm:flex-col w-full px-4 py-32 lg:px-8 gap-8 ">
         <div className="z-0 absolute h-full top-0 left-1/2 -translate-x-1/2 bg-gray/25 w-px hidden sm:block">
           <span className="hidden">real center line 1</span>
         </div>
@@ -17,6 +17,7 @@ export default function ProjectsSection() {
         <div className="absolute top-0 -left-4 h-px bg-gray/25 w-[calc(100%+2rem)]">
           <span className="hidden">top line</span>
         </div>
+
         <div className="flex-1 flex flex-col gap-4 px-1 sm:px-8 lg:px-16">
           <div className="relative flex">
             <div className="absolute top-2 -left-4 w-1.5 h-1.5 bg-line-color-soft"></div>
@@ -26,6 +27,9 @@ export default function ProjectsSection() {
           <h1 className="text-3xl font-bold">
             The Web Animation Ultimate Guide?
           </h1>
+        </div>
+        <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block">
+          <span className="hidden">center vertical line</span>
         </div>
         <div className="flex-1 flex flex-col gap-4 px-1 sm:px-8 lg:px-16">
           <div className="relative flex">
