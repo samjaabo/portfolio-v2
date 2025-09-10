@@ -1,7 +1,7 @@
 export function CardBottomContainer() {
   return (
     <svg
-      className="absolute -bottom-4 lg:-bottom-8 right-0 z-0 w-1/2 h-auto "
+      className="absolute bottom-[2px] translate-y-full right-0 z-0 w-1/2 h-auto "
       width="100%"
       viewBox="0 0 228 38"
       fill="none"
@@ -19,7 +19,7 @@ export function CardBottomContainer() {
 export function SmallCardBottomContainer() {
   return (
     <svg
-      className="absolute -bottom-4  right-0 z-0 w-1/2 h-auto "
+      className="absolute bottom-[2px] translate-y-full  right-0 z-0 w-1/2 h-auto "
       width="100%"
       viewBox="0 0 228 38"
       fill="none"

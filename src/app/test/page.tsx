@@ -98,7 +98,7 @@ export default function TestPage() {
           <CardBottomContainer></CardBottomContainer>
         </div>
       </section>
-      <section className="flex flex-col mt-40  w-full h-fit -px-8 border-y border-line-color">
+      <section className="flex flex-col mt-40  w-full h-fit px-5 bg-transparent border-t border-line-color-soft">
         <div className="flex w-full px-4 py-32 lg:px-8 ">
           <div className="flex-1 flex flex-col gap-4 px-8 lg:px-16">
             <div className="relative flex">
@@ -128,14 +128,41 @@ export default function TestPage() {
             <button className="btn w-fit">Get Started</button>
           </div>
         </div>
-        <div className=" w-full px-4 py-32 lg:px-24 border-t">
-          <div className="mb-32">
+        <div className="relative top-0 left-0 w-full px-4 py-32 lg:px-24">
+          <div className="-z-1 absolute inset-0">
+            <div className="z-0 absolute -top-4 left-1/2 xl:left-2/5 -translate-x-1/2 h-[calc(100%+2rem)] bg-gray/25 w-px md:hidden lg:block block">
+              <span className="hidden">real center line 1</span>
+            </div>
+            <div className="z-0 absolute top-64 right-2/5 -translate-x-1/2 h-[calc(100%-14rem)] bg-gray/25 w-px hidden xl:block">
+              <span className="hidden">real center line 2</span>
+            </div>
+            <div className="absolute top-64 left-[calc(25%-3rem)] xl:left-[calc(20%-3rem)] -translate-x-1/4 h-[calc(100%-14rem)] bg-gray/25 w-px block max-md:hidden">
+              <span className="hidden">left center line</span>
+            </div>
+            <div className="absolute -top-4 right-[calc(25%-3rem)] xl:right-[calc(20%-3rem)] -translate-x-1/4 h-[calc(100%+2rem)] bg-gray/25 w-px block max-md:hidden">
+              <span className="hidden">right center line</span>
+            </div>
+
+            <div className="absolute -top-4 left-0 h-[calc(100%+2rem)] bg-gray/25 w-px">
+              <span className="hidden">left line</span>
+            </div>
+            <div className="absolute -top-4 right-0 h-[calc(100%+2rem)] bg-gray/25 w-px">
+              <span className="hidden">right line</span>
+            </div>
+            <div className="absolute top-0 -left-4 h-px bg-gray/25 w-[calc(100%+2rem)]">
+              <span className="hidden">top line</span>
+            </div>
+            <div className="absolute bottom-0 -left-4 h-px bg-gray/25 w-[calc(100%+2rem)]">
+              <span className="hidden">bottom line</span>
+            </div>
+          </div>
+          <div className="mb-32 flex justify-center">
             <div className="w-1.5 h-1.5 bg-line-color-soft inline-block mr-1 mb-[calc(0.875rem/2-0.375rem/2)]"></div>
             <div className="w-1 h-1 border border-line-color-soft inline-block mr-4 mb-[calc(0.875rem/2-0.25rem/2)]"></div>
             <div className="inline-block">001</div>
             <h1 className="font-bold text-3xl">CHAPTERS INDEX</h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-12 lg:gap-y-32">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-32">
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((_, i) => (
               <div
                 key={i}
@@ -177,6 +204,7 @@ export default function TestPage() {
           </div>
         </div>
       </section>
+      <div className="mt-32 h-96 w-full bg-gray"></div>
     </main>
   );
 }
