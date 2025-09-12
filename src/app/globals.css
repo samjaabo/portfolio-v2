@@ -59,17 +59,10 @@
            py-1 px-8 rounded-full transition-colors duration-300 ease-in-out 
            hover:bg-line-color;
   }
-
-  .card {
-    @apply bg-bgCard p-4 rounded shadow-md transition-transform 
-           duration-300 ease-in-out hover:shadow-lg;
+  .cursus-card-corners-rounded {
+    @apply rounded-tr-sm md:rounded-tr-xl lg:rounded-tr-3xl rounded-bl-sm md:rounded-bl-xl lg:rounded-bl-3xl rounded-br-sm md:rounded-br-xl lg:rounded-br-3xl;
   }
-
-  .header {
-    @apply text-3xl font-crimson font-bold mb-4;
-  }
-
-  .footer {
-    @apply text-sm text-gray mt-8;
+  .cursus-card-rounded {
+    @apply rounded-sm md:rounded-xl lg:rounded-3xl rounded-sm md:rounded-xl lg:rounded-3xl;
   }
 }

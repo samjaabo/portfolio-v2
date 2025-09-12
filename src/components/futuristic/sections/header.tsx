@@ -43,7 +43,7 @@ export default function HeaderSection() {
             THE ONLY COURSE YOU WILL NEED TO MASTER WEB ANIMATIONS
           </div>
           <div className="z-20 lg:max-w-xs max-lg:ml-auto  flex gap-2 items-baseline">
-            <div className="h-2 w-2 rounded-full border border-warning  animate-ping"></div>
+            <div className="h-2 w-2 rounded-0 border border-warning  animate-ping"></div>
             <p className="">New-learner Offer 989.00 dh 759.00 dh</p>
           </div>
         </div>

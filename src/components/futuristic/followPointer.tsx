@@ -1,0 +1,83 @@
+"use client";
+
+import { motion, useSpring } from "framer-motion";
+import { RefObject, useEffect, useRef, useState } from "react";
+
+export default function Drag() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { x, y } = useFollowPointer(ref);
+  const [visible, setVisible] = useState(true);
+
+  const lastMoveRef = useRef(Date.now());
+
+  // Update last movement timestamp
+  useEffect(() => {
+    const handlePointerMove = () => {
+      lastMoveRef.current = Date.now();
+      if (!visible) setVisible(true);
+    };
+    window.addEventListener("pointermove", handlePointerMove);
+    return () => window.removeEventListener("pointermove", handlePointerMove);
+  }, [visible]);
+
+  // Efficient loop to hide after inactivity
+  useEffect(() => {
+    let animFrame: number;
+
+    const checkIdle = () => {
+      if (Date.now() - lastMoveRef.current > 500) {
+        setVisible(false);
+      }
+      animFrame = requestAnimationFrame(checkIdle);
+    };
+
+    animFrame = requestAnimationFrame(checkIdle);
+    return () => cancelAnimationFrame(animFrame);
+  }, []);
+
+  return (
+    <motion.div
+      ref={ref}
+      style={{
+        ...ball,
+        x,
+        y,
+        opacity: visible ? 1 : 0,
+        transition: "opacity 0.3s ease",
+      }}
+    />
+  );
+}
+
+const spring = { damping: 25, stiffness: 180, mass: 0.8, restDelta: 0.001 };
+
+function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
+  const x = useSpring(0, spring);
+  const y = useSpring(0, spring);
+
+  useEffect(() => {
+    const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {
+      x.set(clientX - (ref.current?.offsetWidth ?? 0) / 2);
+      y.set(clientY - (ref.current?.offsetHeight ?? 0) / 2);
+    };
+    window.addEventListener("pointermove", handlePointerMove);
+    return () => window.removeEventListener("pointermove", handlePointerMove);
+  }, [x, y, ref]);
+
+  return { x, y };
+}
+
+const ball = {
+  width: 8,
+  height: 8,
+  backgroundColor: "transparent",
+  border: "1px dashed var(--color-white)",
+  //   outline: "1px solid var(--color-white) ",
+  //   borderRadius: "50%",
+  position: "fixed" as const,
+  top: 0,
+  left: 0,
+  pointerEvents: "none",
+  zIndex: 9999,
+  mixBlendMode: "difference" as const,
+};

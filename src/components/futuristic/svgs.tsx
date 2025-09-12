@@ -1,7 +1,7 @@
 export function CardBottomContainer() {
   return (
     <svg
-      className="absolute bottom-[2px] translate-y-full right-0 z-0 w-1/2 h-auto "
+      className="absolute bottom-[2px] lg:bottom-12 translate-y-full right-0 z-0 w-1/2 h-auto "
       width="100%"
       viewBox="0 0 228 38"
       fill="none"
@@ -38,16 +38,17 @@ export function SmallCardBottomContainer() {
 export function CardTopContainer() {
   return (
     <svg
+      // className="absolute top-[2px] left-0 xl:w-1/3 w-1/2 h-auto -translate-y-full z-0"
       width="100%"
-      viewBox="0 0 1676 214"
+      viewBox="0 0 758 110"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M0 114V39C0 17.369 17.6046 -0.129741 39.2352 0.000724822L635.269 3.59572C647.389 3.66882 658.786 9.37287 666.11 19.0307L726.418 98.5643C733.791 108.288 745.291 114 757.494 114H1637C1658.54 114 1676 131.461 1676 153V175C1676 196.539 1658.54 214 1637 214H39C17.4609 214 0 196.539 0 175V147.803V114Z"
-        fill="var(--soft)"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M758 114H733.494 758c-12.203 0-23.703-5.712-31.076-15.4357L666.11 19.0307c-7.324-9.6578-18.721-15.3619-30.841-15.435L39.2352.0007C17.6046-.1297 0 17.369 0 39v71Z"
+        fill="var(--color-soft)"
       ></path>
     </svg>
   );
