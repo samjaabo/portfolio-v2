@@ -12,7 +12,7 @@ export default function Dropdown({
   children = null,
 }: DropdownProps) {
   return (
-    <div className="w-full flex flex-col border-t border-line-color-soft">
+    <div className="w-full flex flex-col border-t border-line-color-soft last:rounded-b-xl overflow-hidden">
       {/* Header */}
       <Collapsible
         trigger={
@@ -22,10 +22,10 @@ export default function Dropdown({
           </div>
         }
         transitionTime={200}
-        openedClassName="bg-white/25"
+        // openedClassName="bg-white/25"
       >
         {/* Content */}
-        <div className="p-4 bg-white/40 flex flex-col gap-2 bord border-t border-line-color-soft">
+        <div className="p-4 bg-white/40 flex flex-col gap-2 border-t border-line-color-soft ">
           {children}
         </div>
       </Collapsible>
