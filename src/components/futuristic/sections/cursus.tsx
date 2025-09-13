@@ -94,11 +94,12 @@ export default function CursusSection() {
               </h1>
             </div>
           </div>
-          <div className="flex bg-soft h-fit w-full rounded-sm md:rounded-xl lg:rounded-3xl overflow-hidden">
+          <div className="select-none flex bg-soft h-fit w-full rounded-sm md:rounded-xl lg:rounded-3xl overflow-hidden">
             <img
               src="/cursus.webp"
               alt=""
               className="w-full h-auto object-cover object-center"
+              draggable={false}
             />
           </div>
         </div>

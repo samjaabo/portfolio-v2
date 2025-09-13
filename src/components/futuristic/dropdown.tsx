@@ -1,13 +1,10 @@
 "use client";
 
 import Collapsible from "react-collapsible";
-import { BiCaretDownCircle } from "react-icons/bi";
 import { useState } from "react";
 import clsx from "clsx";
-import { BsCaretDown } from "react-icons/bs";
-import { BsChevronDown } from "react-icons/bs";
-import { BsChevronCompactDown } from "react-icons/bs";
 import { BsFillCaretDownFill } from "react-icons/bs";
+
 export interface DropdownProps {
   leftTitle: string;
   rightTitle: string;
