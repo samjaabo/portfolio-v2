@@ -17,56 +17,40 @@ export default function Dropdown({
   children = null,
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const transitionTime = 200;
+
   return (
     <div className="w-full flex flex-col border-t border-line-color-soft/60 last:rounded-b-xl overflow-hidden">
       {/* Header */}
-      <Collapsible
-        onOpening={() => setIsOpen(true)}
-        onClosing={() => setIsOpen(false)}
-        id="collapsible-header"
-        trigger={
-          <div
-            id="collapsible-trigger-1"
-            className="w-full p-8  font-bold cursor-pointer text-md md:text-xl flex flex-row justify-between items-baseline "
-          >
-            <div
-              className="gap-x-4 flex justify-center items-center w-fit h-fit "
-              id="left-title "
-            >
-              <div className=" w-fit items-center flex">
-                <BsFillCaretDownFill
-                  className={clsx(
-                    "w-6 h-6 transition-transform origin-center rounded-full text-color",
-                    {
-                      "rotate-0 ": isOpen,
-                      "rotate-180 ": !isOpen,
-                    },
-                    `duration-${transitionTime}`
-                  )}
-                />
-              </div>
-              <div className="block">{leftTitle}</div>
-            </div>
-            <span
-              id="right-title"
-              className="hidden sm:block flex-1 text-right"
-            >
-              {rightTitle}
-            </span>
-          </div>
-        }
-        transitionTime={transitionTime}
-        // openedClassName="bg-white/25"
+      <button
+        type="button"
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="w-full p-8 font-bold cursor-pointer text-md md:text-xl flex flex-row justify-between items-baseline"
       >
-        {/* Content */}
-        <div
-          className="p-8 bg-white/40 flex flex-col gap-2 border-t border-line-color-soft/60 text-xl"
-          id="dropdown-content"
-        >
+        <div className="gap-x-4 flex justify-center items-center w-fit h-fit">
+          <div className="w-fit items-center flex">
+            <BsFillCaretDownFill
+              className={clsx(
+                "w-6 h-6 transition-transform origin-center rounded-full text-color duration-200",
+                isOpen ? "rotate-0" : "rotate-180"
+              )}
+            />
+          </div>
+          <div className="block">{leftTitle}</div>
+        </div>
+        <span className="hidden sm:block flex-1 text-right">{rightTitle}</span>
+      </button>
+
+      {/* Content */}
+      <div
+        className={clsx(
+          "overflow-hidden transition-[max-height] duration-200 ease-in-out",
+          isOpen ? "max-h-96" : "max-h-0"
+        )}
+      >
+        <div className="p-8 bg-white/40 flex flex-col gap-2 border-t border-line-color-soft/60 text-xl">
           {children}
         </div>
-      </Collapsible>
+      </div>
     </div>
   );
 }
