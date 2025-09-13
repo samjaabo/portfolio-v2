@@ -6,6 +6,7 @@ import {
   NavbarContainerRounded,
   WebsiteLogo,
 } from "../svgs";
+import BackgroundMusic from "../audio";
 
 export default function HeaderSection() {
   return (
@@ -24,8 +25,12 @@ export default function HeaderSection() {
             Contact
           </button>
         </nav>
-        <Link className="absolute m-4 h-8 top-0 left-0 z-10" href={"/test"}>
+        <Link
+          className="absolute m-4 h-8 top-0 left-0 z-10 flex gap-6"
+          href={"/test"}
+        >
           <WebsiteLogo></WebsiteLogo>
+          <BackgroundMusic />
         </Link>
         <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
           <Link className="btn hidden lg:inline-block" href={"/test"}>
@@ -43,7 +48,7 @@ export default function HeaderSection() {
             THE ONLY COURSE YOU WILL NEED TO MASTER WEB ANIMATIONS
           </div>
           <div className="z-20 lg:max-w-xs max-lg:ml-auto  flex gap-2 items-baseline">
-            <div className="h-2 w-2 rounded-0 border border-warning  animate-ping"></div>
+            <div className="h-2 w-2 aspect-square rounded-0 border border-line-color-soft animate-ping"></div>
             <p className="">New-learner Offer 989.00 dh 759.00 dh</p>
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function TestPage() {
       <HeaderSection />
       <ProjectsSection />
       <CursusSection />
-      <div className="md:block hidden fixed bottom-[calc(10px_+_theme(space.8))] right-[calc(10px_+_theme(space.8))] w-8 h-8 rounded-full bg-bg/50 border border-bg"></div>
+      {/* <div className="md:block hidden fixed bottom-[calc(10px_+_theme(space.8))] right-[calc(10px_+_theme(space.8))] w-8 h-8 rounded-full bg-bg/50 border border-bg"></div> */}
       <div className="mt-32 h-96 w-full bg-gray"></div>
     </main>
   );
