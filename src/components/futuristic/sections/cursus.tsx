@@ -76,11 +76,11 @@ export const dropdownTestData: DropdownProps[] = [
 
 export default function CursusSection() {
   return (
-    <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit px-15 bg-transparent border-line-color-soft">
-      <div className="relative top-0 left-0 flex-1 bg-soft   cursus-card-corners-rounded">
+    <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit p-5 md:p-8 xl:px-15 bg-transparent border-line-color-soft">
+      <div className="relative top-0 left-0 flex-1 bg-soft   cursus-card-rounded">
         <div className="relative p-2 sm:p-4 md:p-8 cursus-card-corners-rounded">
           {/* fix collapsable dropdown animation*/}
-          {/* <SmallCardBottomContainer /> */}
+
           <div className="absolute -translate-y-full top-[2px] left-0 flex items-center w-1/2 text-lg">
             <CardTopContainer />
             <div className="absolute inset-0 p-2 sm:p-4 md:p-8 flex justify-start items-start sm:items-center  text-xs/tight sm:text-md md:text-lg">
@@ -105,12 +105,13 @@ export default function CursusSection() {
         <div className="p-2 sm:p-4 md:p-8 w-full h-auto text-base">
           <div className="flex justify-between items-center w-full pb-4 text-xl">
             <h2 className="">42 Cursus</h2>
-            <span className=" ">Duration</span>
+            <span className="hidden sm:block ">Duration</span>
           </div>
           {[...Array(dropdownTestData.length)].map((_, index) => (
             <Dropdown key={index} {...dropdownTestData[index]} />
           ))}
         </div>
+        <SmallCardBottomContainer />
       </div>
     </section>
   );

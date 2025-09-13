@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { Kode_Mono, Nova_Square } from "next/font/google";
 import "./globals.css";
+import clsx from "clsx";
 
 const kodeMono = Kode_Mono({
   subsets: ["latin"],
@@ -23,7 +24,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${kodeMono.variable} font-normal bg-white text-sm text-color border-line-color-soft antialiased`}
+      className={clsx(
+        `${kodeMono.variable}`,
+        "font-normal bg-white text-sm text-color border-line-color-soft antialiased",
+        "scroll-smooth selection:bg-bg/85 selection:text-soft"
+      )}
     >
       <body>{children}</body>
     </html>
