@@ -7,10 +7,11 @@ import {
   WebsiteLogo,
 } from "../svgs";
 import BackgroundMusic from "../audio";
+import { HiOutlineQueueList } from "react-icons/hi2";
 
 export default function HeaderSection() {
   return (
-    <section className=" relative flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full">
+    <section className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full">
       <div className="relative flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
         <NavbarContainer></NavbarContainer>
         <NavbarContainerRounded></NavbarContainerRounded>
@@ -40,7 +41,7 @@ export default function HeaderSection() {
             login
           </Link>
           <button className="lg:hidden inline-block cursor-pointer">
-            <ListIcon></ListIcon>
+            <HiOutlineQueueList className="w-8 h-8" />
           </button>
         </div>
         <div className="relative z-8 w-full flex lg:flex-row flex-col items-start justify-between p-8 pt-22 lg:p-16 lg:pt-32">
