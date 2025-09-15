@@ -2,6 +2,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { WebsiteLogo } from "../svgs";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 export default function Footer() {
   return (
@@ -16,7 +17,7 @@ export default function Footer() {
         <div className="items-center uppercase  hidden lg:flex">NEWSLETTER</div>
         {/* row 1 */}
         <div className="flex">
-          <p className="max-w-1/2">
+          <p className="max-lg:max-w-1/2">
             Whether you're a beginner or an experienced developer, the course
             will guide you through, principles of motion, timeline animation,
             tools, and techniques used by award-winning developers.
@@ -62,19 +63,24 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col items-start lg:items-end gap-4">
+        <div className="flex flex-col items-start lg:items-end gap-4 w-full">
           <div className=" uppercase  lg:hidden block font-bold">
             NEWSLETTER
           </div>
-          <p className="max-w-1/2">
+          <p className="max-lg:max-w-1/2">
             Sign up for our newsletter and get the latest updates, news and
             product offers via email.
           </p>
-          <input
-            type="email"
-            placeholder="Email"
-            className="max-w-1/2 w-full py-3 px-4 outline-none ring-0 border-1 border-line-color-soft focus:border-line-color rounded-xl"
-          />
+          <div className="flex max-lg:max-w-1/2 w-full  ring-0 border-1 border-line-color-soft in-focus-within:border-line-color rounded-xl">
+            <input
+              required
+              autoComplete="email"
+              type="email"
+              placeholder="Email"
+              className="w-full h-full py-3 px-4 outline-none"
+            />
+            <IoIosArrowDroprightCircle className="h-full w-auto hover:text-line-color text-color transition-colors duration-200" />
+          </div>
         </div>
         <div className="w-full h-px border-b bg-transparent border-line-color-soft lg:hidden block"></div>
         {/* row 1 */}
