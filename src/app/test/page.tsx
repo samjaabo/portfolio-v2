@@ -21,10 +21,10 @@ export default function TestPage() {
   return (
     <main className="relative flex flex-col items-center justify-start min-h-screen h-auto bg-white w-full max-w-[120rem] mx-auto">
       <Drag />
-      <HeaderSection />
+      {/* <HeaderSection />
       <ProjectsSection />
       <CursusSection />
-      <BlogSection />
+      <BlogSection /> */}
       <Footer />
       {/* <div className="md:block hidden fixed bottom-[calc(10px_+_theme(space.8))] right-[calc(10px_+_theme(space.8))] w-8 h-8 rounded-full bg-bg/50 border border-bg"></div> */}
     </main>

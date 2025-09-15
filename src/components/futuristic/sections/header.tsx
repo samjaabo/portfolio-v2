@@ -17,13 +17,13 @@ export default function HeaderSection() {
         <NavbarContainer />
         <NavbarContainerRounded />
         <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-9 w-fit h-8 pt-1.5 flex items-center justify-center text-sm lg:text-lg gap-2 lg:gap-8">
-          <button className=" hidden lg:inline-block cursor-pointer text-color ">
+          <button className=" hidden lg:inline-block cursor-pointer hover-underline-link ">
             Home
           </button>
-          <button className="hidden lg:inline-block cursor-pointer text-color">
+          <button className="hidden lg:inline-block cursor-pointer hover-underline-link">
             About
           </button>
-          <button className="hidden lg:inline-block cursor-pointer text-color ">
+          <button className="hidden lg:inline-block cursor-pointer hover-underline-link ">
             Contact
           </button>
         </nav>

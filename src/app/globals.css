@@ -67,7 +67,7 @@
   }
 
   .hover-underline-link {
-    @apply py-2 relative inline-block text-color after:bg-line-color
+    @apply py-1 w-fit h-fit relative inline-block text-color after:bg-line-color
     after:content-[''] after:absolute after:bottom-1 after:left-0
     after:h-[1px] after:w-full
     after:scale-x-0 not-hover:after:origin-right after:origin-left
@@ -75,7 +75,7 @@
     hover:after:scale-x-100;
   }
   .underline-link {
-    @apply py-2 relative inline-block text-color after:bg-line-color
+    @apply py-2 w-fit h-fit relative inline-block text-color after:bg-line-color
     after:content-[''] after:absolute after:bottom-1 after:left-0
     after:h-[1px] after:w-full
     after:scale-x-100 not-hover:after:origin-left after:origin-right
