@@ -31,7 +31,7 @@ export default function Dropdown({
             <BsFillCaretDownFill
               className={clsx(
                 "w-6 h-6 transition-transform origin-center rounded-full text-color duration-200",
-                isOpen ? "rotate-0" : "rotate-180"
+                isOpen ? "rotate-[360deg]" : "rotate-180"
               )}
             />
           </div>

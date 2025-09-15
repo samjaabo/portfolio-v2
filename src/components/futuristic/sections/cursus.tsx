@@ -2,6 +2,7 @@
 
 import Dropdown, { DropdownProps } from "../dropdown";
 import { CardTopContainer, SmallCardBottomContainer } from "../svgs";
+import Indicator from "../ui/indicator";
 
 export const dropdownTestData: DropdownProps[] = [
   {
@@ -78,7 +79,7 @@ export default function CursusSection() {
   return (
     <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit p-5 md:p-8 xl:px-15 bg-transparent border-line-color-soft">
       <div className="relative top-0 left-0 flex-1 bg-soft   cursus-card-rounded">
-        <div className="relative p-2 sm:p-4 md:p-8 cursus-card-corners-rounded">
+        <div className="relative px-2 sm:p-x4 md:px-8 cursus-card-corners-rounded">
           {/* fix collapsable dropdown animation*/}
 
           <div className="absolute -translate-y-full top-[2px] left-0 flex items-center w-1/2 text-lg">
@@ -93,15 +94,16 @@ export default function CursusSection() {
                 42 Cursus - A project-based learning platform
               </h1>
             </div>
+            <Indicator hint="001" text="WHY IS IT CONSIDERED" />
           </div>
-          <div className="select-none flex bg-soft h-fit w-full rounded-sm md:rounded-xl lg:rounded-3xl overflow-hidden">
+          {/* <div className="select-none flex bg-soft h-fit w-full rounded-sm md:rounded-xl lg:rounded-3xl overflow-hidden">
             <img
               src="/cursus.webp"
               alt=""
               className="w-full h-auto object-cover object-center"
               draggable={false}
             />
-          </div>
+          </div> */}
         </div>
         <div className="p-2 sm:p-4 md:p-8 w-full h-auto text-base">
           <div className="flex justify-between items-center w-full pb-4 text-xl">

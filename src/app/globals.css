@@ -65,4 +65,26 @@
   .cursus-card-rounded {
     @apply rounded-tr-sm md:rounded-tr-xl lg:rounded-tr-3xl rounded-bl-sm md:rounded-bl-xl lg:rounded-bl-3xl;
   }
+
+  .hover-underline-link {
+    @apply py-2 relative inline-block text-color after:bg-line-color
+    after:content-[''] after:absolute after:bottom-1 after:left-0
+    after:h-[1px] after:w-full
+    after:scale-x-0 not-hover:after:origin-right after:origin-left
+    after:transition-transform after:duration-500
+    hover:after:scale-x-100;
+  }
+  .underline-link {
+    @apply py-2 relative inline-block text-color after:bg-line-color
+    after:content-[''] after:absolute after:bottom-1 after:left-0
+    after:h-[1px] after:w-full
+    after:scale-x-100 not-hover:after:origin-left after:origin-right
+    after:transition-transform after:duration-500
+    hover:after:scale-x-0;
+  }
+  
+}
+
+@layer utilities {
+
 }

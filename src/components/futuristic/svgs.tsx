@@ -73,7 +73,7 @@ export function FullCard() {
 export function NavbarContainer() {
   return (
     <svg
-      className="absolute w-full h-20 lg:max-h-12 lg:left-1/2 lg:-translate-x-1/2 z-1 lg:-top-2 pointer-events-none hidden lg:block"
+      className="absolute w-full max-md:w-1/3 max-md: lg:h-20 max-h-12 left-1/2 -translate-x-1/2  top-0 pointer-events-none z-1"
       width="100%"
       viewBox="0 0 879 87"
       fill="none"
@@ -83,8 +83,92 @@ export function NavbarContainer() {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M879 0H442h-4H0L33.509 31.6009 78.566 75.3991C86.219 82.8382 96.471 87 107.144 87H438h4H772.86c10.67 0 20.92-4.1618 28.57-11.6009L879 0Z"
-        fill="var(--color-var(--color-soft))"
+        fill="var(--color-white, #FFFFFF)"
       ></path>
+    </svg>
+  );
+}
+export function FuturisticButton() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100"
+      height="100"
+      viewBox="0 0 100 100"
+      fill="none"
+      className="absolute top-0 left-0 w-full h-full pointer-events-none"
+      preserveAspectRatio="none"
+    >
+      <rect
+        y="100"
+        width="20"
+        height="1.90495"
+        transform="rotate(-90 0 100)"
+        fill="var(--color-color)"
+      />
+      <rect
+        x="20"
+        y="100"
+        width="19.0496"
+        height="2"
+        transform="rotate(-180 20 100)"
+        fill="var(--color-color)"
+      />
+      <path
+        d="M0 0L100 1.01782e-08L100 0.999999L0 0.999999L0 0Z"
+        fill="var(--color-color)"
+        fill-opacity="0.3"
+      />
+      <path
+        d="M100 100L5.96046e-08 100L8.68081e-08 99L100 99L100 100Z"
+        fill="var(--color-color)"
+        fill-opacity="0.3"
+      />
+      <rect
+        x="99"
+        width="0.997144"
+        height="99.9999"
+        fill="var(--color-color)"
+        fill-opacity="0.3"
+      />
+      <rect
+        width="0.997144"
+        height="99.9999"
+        fill="var(--color-color)"
+        fill-opacity="0.3"
+      />
+      <rect
+        x="100"
+        width="20"
+        height="1.90496"
+        transform="rotate(90 100 0)"
+        fill="var(--color-color)"
+      />
+      <rect x="80" width="19.0496" height="2" fill="var(--color-color)" />
+      <rect width="20" height="1.90457" fill="var(--color-color)" />
+      <rect
+        y="20"
+        width="19.0457"
+        height="2"
+        transform="rotate(-90 0 20)"
+        fill="var(--color-color)"
+      />
+      <rect
+        x="100"
+        y="100"
+        width="20"
+        height="1.90456"
+        transform="rotate(-180 100 100)"
+        fill="var(--color-color)"
+      />
+      <rect
+        x="100"
+        y="80"
+        width="19.0457"
+        height="2"
+        transform="rotate(90 100 80)"
+        fill="var(--color-color)"
+      />
     </svg>
   );
 }
@@ -113,65 +197,24 @@ export function ProfileImageContainer() {
       viewBox="0 0 1600 1815.5"
       className="w-full h-auto"
     >
-      {/* --- 1st Clip --- */}
       <defs>
         <path
           id="clipPath1"
           d="M1345.9,8.1H509.7c-13.2,0-26.1,4.5-36.4,12.8l-44.7,35.9c-13.7,11-21.7,27.7-21.7,45.3v312.4
             c0,15.7,6.4,30.8,17.6,41.7l47.8,46.4c10.8,10.5,25.4,16.4,40.5,16.4h423.8c14.9,0,29.3,5.7,40.1,16l326.4,311
             c10.8,10.3,25.2,16,40.1,16h191.6c15.4,0,30.2-6.1,41.1-17l7.1-7.1c10.9-10.9,17-25.7,17-41.1V262.2c0-15.4-6.1-30.2-17-41.1
-            l-196-196C1376.1,14.2,1361.3,8.1,1345.9,8.1z"
+            l-196-196C1376.1,14.2,1361.3,8.1,1345.9,8.1z M344.6,51.6L310.1,17C299.2,6.1,284.4,0,269,0H92.7C77.3,0,62.5,6.1,51.6,17L17,51.6C6.1,62.5,0,77.3,0,92.7
+            v596.9c0,15.4,6.1,30.2,17,41.1l1067.9,1067.9c10.9,10.9,25.7,17,41.1,17h358.7c15.4,0,30.2-6.1,41.1-17l49.1-49.1
+            c10.9-10.9,17-25.7,17-41.1v-476.6c0-15.4-6.1-30.2-17-41.1L960.7,576.5c-10.9-10.9-25.7-17-41.1-17H446.3
+            c-15.4,0-30.2-6.1-41.1-17L378.7,516c-10.9-10.9-17-25.7-17-41.1V92.7C361.7,77.3,355.5,62.5,344.6,51.6z M0.3,1657.1V973.2c0-14.4,5.4-28.4,15.1-39l38-41.9c6.3-6.9,15.2-10.9,24.6-10.9c8.7,0,17,3.4,23.2,9.5
+            L942,1715c11.2,10.9,17.4,25.9,17.4,41.5v9.7c0,12.8-5.1,25.1-14.1,34.1s-21.3,14.1-34.1,14.1H164.5c-14.7,0-28.9-5.6-39.7-15.7
+            l-106.1-99.1C6.9,1688.6,0.3,1673.2,0.3,1657.1z"
         />
       </defs>
       <clipPath id="clip1">
         <use href="#clipPath1" />
       </clipPath>
       <g style={{ clipPath: "url(#clip1)" }}>
-        <image
-          href="/about.jpg"
-          width="1600"
-          height="1815"
-          transform="matrix(1 0 0 1 3 0.7698)"
-          className="w-full h-auto"
-        />
-      </g>
-
-      {/* --- 2nd Clip --- */}
-      <defs>
-        <path
-          id="clipPath2"
-          d="M344.6,51.6L310.1,17C299.2,6.1,284.4,0,269,0H92.7C77.3,0,62.5,6.1,51.6,17L17,51.6C6.1,62.5,0,77.3,0,92.7
-            v596.9c0,15.4,6.1,30.2,17,41.1l1067.9,1067.9c10.9,10.9,25.7,17,41.1,17h358.7c15.4,0,30.2-6.1,41.1-17l49.1-49.1
-            c10.9-10.9,17-25.7,17-41.1v-476.6c0-15.4-6.1-30.2-17-41.1L960.7,576.5c-10.9-10.9-25.7-17-41.1-17H446.3
-            c-15.4,0-30.2-6.1-41.1-17L378.7,516c-10.9-10.9-17-25.7-17-41.1V92.7C361.7,77.3,355.5,62.5,344.6,51.6z"
-        />
-      </defs>
-      <clipPath id="clip2">
-        <use href="#clipPath2" />
-      </clipPath>
-      <g style={{ clipPath: "url(#clip2)" }}>
-        <image
-          href="/about.jpg"
-          width="1600"
-          height="1815"
-          transform="matrix(1 0 0 1 3 0.7698)"
-          className="w-full h-auto"
-        />
-      </g>
-
-      {/* --- 3rd Clip --- */}
-      <defs>
-        <path
-          id="clipPath3"
-          d="M0.3,1657.1V973.2c0-14.4,5.4-28.4,15.1-39l38-41.9c6.3-6.9,15.2-10.9,24.6-10.9c8.7,0,17,3.4,23.2,9.5
-            L942,1715c11.2,10.9,17.4,25.9,17.4,41.5v9.7c0,12.8-5.1,25.1-14.1,34.1s-21.3,14.1-34.1,14.1H164.5c-14.7,0-28.9-5.6-39.7-15.7
-            l-106.1-99.1C6.9,1688.6,0.3,1673.2,0.3,1657.1z"
-        />
-      </defs>
-      <clipPath id="clip3">
-        <use href="#clipPath3" />
-      </clipPath>
-      <g style={{ clipPath: "url(#clip3)" }}>
         <image
           href="/about.jpg"
           width="1600"

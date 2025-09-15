@@ -6,7 +6,7 @@ import { FuturisticCardLines } from "../ui/card-lines";
 export default function ProjectsSection() {
   return (
     <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit px-5 bg-transparent border-line-color-soft">
-      <div className="relative left-0 top-0 flex max-sm:flex-col w-full px-4 py-32 lg:px-8 gap-8 ">
+      <div className="relative left-0 top-0 flex max-sm:flex-col w-full px-4 py-32 lg:px-8 gap-8 max-sm:gap-32 ">
         <div className="z-0 absolute h-full top-0 left-1/2 -translate-x-1/2 bg-gray/25 w-px hidden sm:block">
           <span className="hidden">real center line 1</span>
         </div>
@@ -22,9 +22,9 @@ export default function ProjectsSection() {
 
         <div className="flex-1 flex flex-col gap-4 px-1 sm:px-8 lg:px-16">
           <div className="relative flex">
-            <div className="absolute top-2 -left-4 w-1.5 h-1.5 bg-line-color-soft"></div>
-            <div className="absolute top-[0.56275rem] -left-2 w-1 h-1 border border-line-color-soft"></div>
-            WHY IS IT CONSIDERED
+            <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
+            <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
+            <div className="pl-8">WHY IS IT CONSIDERED</div>
           </div>
           <h1 className="text-3xl font-bold">
             The Web Animation Ultimate Guide?

@@ -45,8 +45,11 @@ export default function BlogSection() {
         <div className="absolute top-0 -left-4 h-px bg-gray/25 w-[calc(100%+2rem)]">
           <span className="hidden">top line</span>
         </div>
+        <div className="absolute bottom-4 -left-4 h-px bg-gray/25 w-[calc(100%+2rem)]">
+          <span className="hidden">bottom line</span>
+        </div>
 
-        <div className="flex-1 h-fit flex flex-col gap-4 px-1 sm:px-8 lg:px-16">
+        <div className="flex-1 h-fit flex flex-col sm:gap-4 px-1 sm:px-8 lg:px-16">
           <div className="relative flex">
             <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
             <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
@@ -66,7 +69,7 @@ export default function BlogSection() {
             transitions, parallax animations, mouse interactions and much more.
           </p>
         </div>
-        <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block">
+        <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block max-sm:my-32">
           <span className="hidden">center vertical line</span>
         </div>
         <div className="overflow-visible flex-1 items-stretch justify-center flex flex-col gap-4 px-1 sm:px-8 lg:px-16  h-fit">
