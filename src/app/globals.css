@@ -3,6 +3,7 @@
 /* ----------------- Theme ----------------- */
 
 @theme {
+    --golden-ratio: 1.61803398875;
     --color-color: #5d3136;
     --color-line-color: #7c5658;
     --color-line-color-soft: #d8bfc0;
@@ -57,7 +58,14 @@
   .btn {
     @apply bg-color border border-color font-normal text-white text-center 
            py-1 px-8  transition-colors duration-300 ease-in-out 
-           hover:bg-transparent hover:text-color rounded-full max-w-96;
+            rounded-full max-w-96 hover:bg-transparent hover:text-color; 
+            /* hover:bg-transparent hover:text-color */
+  }
+  .btn-secondary {
+    @apply  border border-color font-normal text-color bg-transparent text-center 
+           py-1 px-8  transition-colors duration-300 ease-in-out 
+            rounded-full max-w-96; 
+            /* hover:bg-transparent hover:text-color */
   }
   .cursus-card-corners-rounded {
     @apply rounded-tr-sm md:rounded-tr-xl lg:rounded-tr-3xl rounded-bl-sm md:rounded-bl-xl lg:rounded-bl-3xl rounded-br-sm md:rounded-br-xl lg:rounded-br-3xl;

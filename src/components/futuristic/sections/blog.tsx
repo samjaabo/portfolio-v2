@@ -2,7 +2,10 @@ import { ProfileImageContainer } from "../svgs";
 
 export default function BlogSection() {
   return (
-    <section className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit px-5 bg-transparent border-line-color-soft">
+    <section
+      id="about"
+      className="relative top-0 left-0 flex flex-col mt-40  w-full h-fit px-5 bg-transparent border-line-color-soft"
+    >
       <div className="relative left-0 top-0 flex max-sm:flex-col w-full px-4 py-32 lg:px-8 gap-8 ">
         <div className="flex-1 flex flex-col items-center justify-center gap-4 px-1 sm:px-8 lg:px-16">
           <div className="absolute -top-4 left-0 h-full bg-gray/25 w-px">

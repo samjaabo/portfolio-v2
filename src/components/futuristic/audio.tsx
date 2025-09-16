@@ -55,7 +55,7 @@ export default function BackgroundMusic() {
         )}
       ></div>
       <audio ref={audioRef} loop>
-        <source src="/futuristic/nn-the-floor.mp3" type="audio/mpeg" />
+        <source src="/futuristic/on-the-floor.mp3" type="audio/mpeg" />
       </audio>
       <button
         onClick={togglePlay}

@@ -9,23 +9,21 @@ import {
 } from "../svgs";
 import BackgroundMusic from "../audio";
 import { HiOutlineQueueList } from "react-icons/hi2";
+import DecryptText, { DecryptTextButton } from "../decryptedTextEffect";
 
 export default function HeaderSection() {
   return (
-    <section className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full">
+    <section
+      id="explore"
+      className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full"
+    >
       <div className="relative  top-0 left-0  flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
         <NavbarContainer />
         <NavbarContainerRounded />
         <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-9 w-fit h-8 pt-1.5 flex items-center justify-center text-sm lg:text-lg gap-2 lg:gap-8">
-          <button className=" hidden lg:inline-block cursor-pointer hover-underline-link ">
-            Home
-          </button>
-          <button className="hidden lg:inline-block cursor-pointer hover-underline-link">
-            About
-          </button>
-          <button className="hidden lg:inline-block cursor-pointer hover-underline-link ">
-            Contact
-          </button>
+          <DecryptText href="#explore">explore</DecryptText>
+          <DecryptText href="#work">Work</DecryptText>
+          <DecryptText href="#about">About</DecryptText>
         </nav>
         <Link
           className="absolute m-4 h-8 top-0 left-0 z-10 flex gap-6"
@@ -35,9 +33,8 @@ export default function HeaderSection() {
           <BackgroundMusic />
         </Link>
         <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
-          <Link className="btn hidden lg:inline-block" href={"/test"}>
-            signup
-          </Link>
+          <DecryptTextButton href="#about">contact</DecryptTextButton>
+
           <Link className="btn hidden lg:inline-block" href={"/test"}>
             login
           </Link>

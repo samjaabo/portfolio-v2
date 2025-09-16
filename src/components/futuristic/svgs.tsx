@@ -216,11 +216,11 @@ export function ProfileImageContainer() {
       </clipPath>
       <g style={{ clipPath: "url(#clip1)" }}>
         <image
-          href="/about.jpg"
+          href="/me-said.webp"
           width="1600"
           height="1815"
           transform="matrix(1 0 0 1 3 0.7698)"
-          className="w-full h-auto"
+          className="h-full w-auto object-cover mx-auto"
         />
       </g>
     </svg>
