@@ -35,7 +35,10 @@ export default function HeaderSection() {
         <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
           <DecryptTextButton href="#about">contact</DecryptTextButton>
 
-          <Link className="btn hidden lg:inline-block" href={"/test"}>
+          <Link
+            className="btn hidden lg:inline-block set-top-left-corner"
+            href={"/test"}
+          >
             login
           </Link>
           <button className="lg:hidden inline-block cursor-pointer">

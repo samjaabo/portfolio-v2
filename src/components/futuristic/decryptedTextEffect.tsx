@@ -116,7 +116,7 @@ export function DecryptTextButton({
     <a
       href={href}
       onMouseEnter={handleHover}
-      className="hidden lg:inline-block cursor-pointer btn-secondary capitalize"
+      className="hidden lg:inline-block cursor-pointer btn-secondary set-top-left-corner  capitalize"
     >
       {text}
     </a>

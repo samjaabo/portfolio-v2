@@ -27,7 +27,7 @@ export default function RootLayout({
       className={clsx(
         `${kodeMono.variable}`,
         "font-normal bg-white text-sm text-color border-line-color-soft antialiased",
-        "scroll-smooth selection:bg-bg/85 selection:text-soft"
+        "scroll-smooth selection:bg-bg/85 selection:text-soft box-border"
       )}
     >
       <body>{children}</body>

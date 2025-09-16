@@ -55,18 +55,25 @@
 
 /* ----------------- Components ----------------- */
 @layer components {
+  .set-top-left-corner {
+    @apply relative top-0 left-0 before:content-[''] after:absolute after:top-0 after:left-0 after:w-auto after:aspect-square after:h-1/2 after:bg-soft
+             after:border-r after:border-color after:rotate-45 after:-translate-x-1/2 after:-translate-y-1/2 ;
+  }
+
   .btn {
     @apply bg-color border border-color font-normal text-white text-center 
            py-1 px-8  transition-colors duration-300 ease-in-out 
-            rounded-full max-w-96 hover:bg-transparent hover:text-color; 
+             max-w-96 hover:bg-transparent hover:text-color; 
             /* hover:bg-transparent hover:text-color */
   }
   .btn-secondary {
-    @apply  border border-color font-normal text-color bg-transparent text-center 
+    @apply border border-color font-normal text-color bg-transparent text-center 
            py-1 px-8  transition-colors duration-300 ease-in-out 
-            rounded-full max-w-96; 
+             max-w-96 ; 
             /* hover:bg-transparent hover:text-color */
   }
+  
+  
   .cursus-card-corners-rounded {
     @apply rounded-tr-sm md:rounded-tr-xl lg:rounded-tr-3xl rounded-bl-sm md:rounded-bl-xl lg:rounded-bl-3xl rounded-br-sm md:rounded-br-xl lg:rounded-br-3xl;
   }
