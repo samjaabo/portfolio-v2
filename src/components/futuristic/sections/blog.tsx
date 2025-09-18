@@ -20,18 +20,16 @@ export default function BlogSection() {
           <div className="relative top-0 left-0 flex">
             <div className="absolute top-2 -left-4 w-1.5 h-1.5 bg-line-color-soft"></div>
             <div className="absolute top-[0.56275rem] -left-2 w-1 h-1 border border-line-color-soft"></div>
-            WHY IS IT CONSIDERED
+            who I am
           </div>
           <h1 className="text-3xl font-bold">
-            The Web Animation Ultimate Guide?
+            Crafting Modern Web Experiences
           </h1>
           <p className="max-w-lg text-center">
-            You'll start by learning the basics of web animation, including the
-            principles of motion, timeline animation, and the tools and
-            techniques used by award-winning developers. You'll then move on to
-            more advanced topics, such as creating animations with advanced
-            timelines, text animations, smooth transitions, parallax animations,
-            mouse interactions and much more.
+            I design and build web applications that combine clean,
+            user-centered interfaces with scalable, high-performance code. Every
+            project I work on focuses on usability, aesthetics, and technical
+            excellence.
           </p>
         </div>
       </div>
@@ -56,20 +54,27 @@ export default function BlogSection() {
           <div className="relative flex">
             <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
             <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
-            <div className="pl-8"> WHY IS IT CONSIDERED</div>
+            <div className="pl-8"> About Me</div>
           </div>
           <h1 className="text-3xl font-bold">
-            The Web Animation Ultimate Guide?
+            Full-Stack Developer & UI/UX Designer
           </h1>
           <p>
-            You'll start by learning the basics of web animation, including the
-            principles of motion, timeline animation, and the tools and
-            techniques used by award-winning developers.
+            I specialize in designing and building modern web applications that
+            are both visually compelling and technically robust. My work
+            combines clean UI/UX design with scalable full-stack development,
+            ensuring seamless user experiences across devices.
           </p>
           <p>
-            You'll then move on to more advanced topics, such as creating
-            animations with advanced timelines, text animations, smooth
-            transitions, parallax animations, mouse interactions and much more.
+            With expertise in Next.js, React, Tailwind, and Supabase, I turn
+            ideas into functional, interactive, and high-performance
+            applications, always focusing on code quality, accessibility, and
+            user-centered design.
+          </p>
+          <p>
+            I build web applications that are both visually appealing and highly
+            functional, combining clean UI/UX with scalable full-stack
+            development.
           </p>
         </div>
         <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block max-sm:my-32">

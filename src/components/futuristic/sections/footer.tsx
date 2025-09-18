@@ -18,9 +18,9 @@ export default function Footer() {
         {/* row 1 */}
         <div className="flex">
           <p className="sm:max-w-1/2 lg:max-w-full max-w-full">
-            Whether you're a beginner or an experienced developer, the course
-            will guide you through, principles of motion, timeline animation,
-            tools, and techniques used by award-winning developers.
+            I’m a Full-Stack Developer & UI/UX Designer creating modern,
+            scalable web experiences. Explore projects, learn about my approach,
+            or connect to collaborate.
           </p>
         </div>
         <div className="flex">
@@ -28,17 +28,17 @@ export default function Footer() {
             <li className="lg:hidden block font-bold pb-4">website</li>
             <li className="">
               <a href="#" className="hover-underline-link">
-                Web Animationsx
+                Projects
               </a>
             </li>
             <li className="">
               <a href="#" className="hover-underline-link">
-                Learn Web3D
+                About Me
               </a>
             </li>
             <li className="">
               <a href="#" className="hover-underline-link">
-                Creative Code
+                Contact
               </a>
             </li>
           </ul>
@@ -68,8 +68,8 @@ export default function Footer() {
             NEWSLETTER
           </div>
           <p className="sm:max-w-1/2 lg:max-w-full max-w-full">
-            Sign up for our newsletter and get the latest updates, news and
-            product offers via email.
+            Subscribe to my newsletter for updates on my latest projects, design
+            tips, and web development insights.
           </p>
           <div className="flex sm:max-w-1/2 lg:max-w-full max-w-full w-full  ring-0 border-1 border-line-color-soft in-focus-within:border-line-color rounded-xl">
             <input

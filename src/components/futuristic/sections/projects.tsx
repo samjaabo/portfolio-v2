@@ -27,10 +27,10 @@ export default function ProjectsSection() {
           <div className="relative flex">
             <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
             <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
-            <div className="pl-8">WHY IS IT CONSIDERED</div>
+            <div className="pl-8">SHOWCASING</div>
           </div>
           <h1 className="text-3xl font-bold">
-            The Web Animation Ultimate Guide?
+            Cutting-Edge Web Development Projects
           </h1>
         </div>
         <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block">
@@ -40,18 +40,17 @@ export default function ProjectsSection() {
           <div className="relative flex">
             <div className="absolute top-2 -left-3 w-1.5 h-1.5 bg-line-color-soft"></div>
             {/* <div className="absolute top-[0.56275rem] -left-2 w-1 h-1 border border-line-color-soft"></div> */}
-            5+ YEARS OF ANIMATIONS COMPILED IN ONE EXCLUSIVE COURSE
+            1+ YEAR CRAFTING MODERN, RESPONSIVE, AND SCALABLE WEBSITES
           </div>
           <p>
-            You'll start by learning the basics of web animation, including the
-            principles of motion, timeline animation, and the tools and
-            techniques used by award-winning developers. You'll then move on to
-            more advanced topics, such as creating animations with advanced
-            timelines, text animations, smooth transitions, parallax animations,
-            mouse interactions and much more.
+            I specialize in building high-performance web applications using
+            Next.js, Supabase, TailwindCSS, and chadcn UI. Each project is
+            crafted with attention to detail, clean code, and seamless user
+            experiences. From dynamic dashboards to interactive landing pages, I
+            bring designs to life with precision and creativity.
           </p>
 
-          <button className="btn w-fit">Get Started</button>
+          <button className="btn w-fit">View My Work</button>
         </div>
       </div>
       <div className="relative top-0 left-0 w-full px-4 py-32 lg:px-24">
@@ -59,8 +58,8 @@ export default function ProjectsSection() {
         <div className="relative md:left-[calc(25%-3rem)] lg:left-0 top-0 mb-32 w-fit">
           <div className="w-1.5 h-1.5 bg-line-color-soft inline-block mr-1 mb-[calc(0.875rem/2-0.375rem/2)]"></div>
           <div className="w-1 h-1 border border-line-color-soft inline-block mr-4 mb-[calc(0.875rem/2-0.25rem/2)]"></div>
-          <div className="inline-block">001</div>
-          <h1 className="font-bold text-3xl">CHAPTERS INDEX</h1>
+          <div className="inline-block">000</div>
+          <h1 className="font-bold text-3xl">Projects Showcase</h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-x-4 gap-y-32">
           {[0, 1, 2, 3, 4, 5, 6, 7].map((_, i) => (

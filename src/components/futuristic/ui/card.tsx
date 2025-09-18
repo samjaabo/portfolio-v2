@@ -1,7 +1,49 @@
 import clsx from "clsx";
 import { SmallCardBottomContainer } from "../svgs";
-
+const projects = [
+  {
+    title: "Interactive Dashboard",
+    description:
+      "Built a real-time analytics dashboard using Next.js and Supabase. Includes dynamic charts, responsive layouts, and optimized performance for enterprise data.",
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "Developed a full-featured online store with TailwindCSS and chadcn UI. Integrated payment gateway, product catalog, and smooth user interactions.",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "Designed and implemented a personal portfolio with Next.js. Focused on animations, responsive design, and fast load times.",
+  },
+  {
+    title: "Collaboration Tool",
+    description:
+      "Created a project management tool for teams with real-time updates, notifications, and secure authentication using Supabase.",
+  },
+  {
+    title: "Landing Page Animations",
+    description:
+      "Crafted multiple interactive landing pages with advanced animations, parallax effects, and modern UI patterns.",
+  },
+  {
+    title: "Blog Platform",
+    description:
+      "Built a fast, SEO-friendly blogging platform with Markdown support, dynamic routing, and intuitive content management.",
+  },
+  {
+    title: "Internal Admin Panel",
+    description:
+      "Developed a scalable admin panel for internal use with dashboards, charts, and user management tools.",
+  },
+  {
+    title: "Custom UI Component Library",
+    description:
+      "Created reusable, accessible UI components using TailwindCSS and chadcn UI for faster project development.",
+  },
+];
 export function FuturisticCard({ id }: { id: number }) {
+  const project = projects[id % projects.length];
   return (
     <div
       className={clsx(
@@ -15,16 +57,9 @@ export function FuturisticCard({ id }: { id: number }) {
         <div className="w-1.5 h-1.5 bg-line-color-soft inline-block mr-1 mb-[calc(0.875rem/2-0.375rem/2)]"></div>
         <div className="w-1 h-1 border border-line-color-soft inline-block mr-4 mb-[calc(0.875rem/2-0.25rem/2)]"></div>
         <div className="inline-block">{String(id + 1).padStart(3, "0")}</div>
-        <h1 className="font-bold text-3xl">CHAPTERS INDEX</h1>
+        <h1 className="font-bold text-3xl">{project.title}</h1>
       </div>
-      <p className=" line-clamp-8">
-        You'll start by learning the basics of web animation, including the
-        principles of motion, timeline animation, and the tools and techniques
-        used by award-winning developers. You'll then move on to more advanced
-        topics, such as creating animations with advanced timelines, text
-        animations, smooth transitions, parallax animations, mouse interactions
-        and much more.
-      </p>
+      <p className=" line-clamp-8">{project.description}</p>
       <SmallCardBottomContainer />
     </div>
   );
