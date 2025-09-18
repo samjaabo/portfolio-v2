@@ -88,6 +88,7 @@ export function NavbarContainer() {
     </svg>
   );
 }
+
 export function FuturisticButton() {
   return (
     <svg

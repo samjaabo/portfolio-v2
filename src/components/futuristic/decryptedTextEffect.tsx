@@ -1,80 +1,33 @@
 "use client";
+import clsx from "clsx";
 import { useState } from "react";
 
-export default function DecryptText({
-  children,
-  href = "#",
-  duration = 1000, // total time in ms
-  intervalMs = 100, // frame rate
-}: {
+export interface LinkButtonProps {
   children: string;
   href?: string;
-  duration?: number;
-  intervalMs?: number;
-}) {
-  const [text, setText] = useState(children);
-  const original = children;
-  const letters = ".-+*#%?<>^$@!X01";
-
-  function handleHover() {
-    const totalFrames = Math.floor(duration / intervalMs);
-    let frame = 0;
-
-    // Each character gets a random frame at which it "locks in"
-    const lockFrames = original
-      .split("")
-      .map(() => Math.floor(Math.random() * totalFrames));
-
-    const interval = setInterval(() => {
-      setText(() =>
-        original
-          .split("")
-          .map((char, i) => {
-            if (frame >= lockFrames[i]) {
-              return original[i]; // locked in
-            }
-            return letters[Math.floor(Math.random() * letters.length)];
-          })
-          .join("")
-      );
-
-      frame++;
-      if (frame >= totalFrames) {
-        clearInterval(interval);
-        setText(original); // ensure final clean
-      }
-    }, intervalMs);
-  }
-
-  return (
-    <a
-      href={href}
-      onMouseEnter={handleHover}
-      className="hidden lg:inline-block cursor-pointer hover-underline-link capitalize"
-    >
-      {text}
-    </a>
-  );
+  duration?: number; // total time in ms
+  intervalMs?: number; // frame rate
+  variant?: "primary" | "secondary" | "link";
+  allowUnderLineHover?: boolean;
+  AllowDecryptedTextHover?: boolean;
+  letters?: string;
 }
 
-export function DecryptTextButton({
+export function LinkButton({
   children,
   href = "#",
   duration = 900, // total time in ms
-  intervalMs = 64, // frame rate
-}: {
-  children: string;
-  href?: string;
-  duration?: number;
-  intervalMs?: number;
-}) {
+  intervalMs = 32, // frame rate
+  variant = "primary",
+  allowUnderLineHover = false,
+  AllowDecryptedTextHover = false,
+  letters = "0123456789ZXAYUIO#$",
+}: LinkButtonProps) {
   const [text, setText] = useState(children);
-  const original = children;
-  const letters = ".-+*#%?<>[]{}^$@!";
+  const original = children as string;
 
   function handleHover() {
     const totalFrames = Math.floor(duration / intervalMs);
-    const halfFrames = Math.floor(totalFrames / 2);
     let frame = 0;
 
     const interval = setInterval(() => {
@@ -82,23 +35,12 @@ export function DecryptTextButton({
         original
           .split("")
           .map((char, i) => {
-            // left → right phase
-            if (frame <= halfFrames) {
-              if (frame > halfFrames * (i / original.length)) {
-                return original[i];
-              }
-            }
-            // right → left phase
-            else {
-              const progress = frame - halfFrames;
-              if (
-                progress >
-                halfFrames * ((original.length - 1 - i) / original.length)
-              ) {
-                return original[i];
-              }
-            }
+            // decide when this char should lock in
+            const revealFrame = Math.floor((i / original.length) * totalFrames);
 
+            if (frame >= revealFrame) {
+              return original[i];
+            }
             return letters[Math.floor(Math.random() * letters.length)];
           })
           .join("")
@@ -116,7 +58,11 @@ export function DecryptTextButton({
     <a
       href={href}
       onMouseEnter={handleHover}
-      className="hidden lg:inline-block cursor-pointer btn-secondary set-top-left-corner  capitalize"
+      className={clsx("hidden lg:inline-block cursor-pointer capitalize", {
+        "hover-underline-link": allowUnderLineHover,
+        btn: variant === "primary",
+        "btn-secondary": variant === "secondary",
+      })}
     >
       {text}
     </a>

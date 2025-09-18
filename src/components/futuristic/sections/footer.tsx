@@ -7,7 +7,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 export default function Footer() {
   return (
     <footer className="p-1 sm:p-5 mt-32 h-full w-full">
-      <div className="grid grid-cols-1 grid-rows-[repeat(17, minmax(0, auto))] lg:grid-cols-4  lg:grid-rows-[auto_1fr_auto_auto] gap-y-8 gap-x-16 p-3 sm:p-8 bg-soft w-full h-fit rounded-xl  text-xs">
+      <div className="grid grid-cols-1 grid-rows-[repeat(17, minmax(0, auto))] lg:grid-cols-4  lg:grid-rows-[auto_1fr_auto_auto] gap-y-8 gap-x-16 p-3 sm:p-8 bg-soft w-full h-fit rounded-xl ">
         {/* row 1 */}
         <div className="flex font-bold text-sm">
           <WebsiteLogo></WebsiteLogo>

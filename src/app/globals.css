@@ -32,9 +32,20 @@
   /* Typography */
   --font-crimson: var(--font-crimson), serif;
   --font-lora: var(--font-lora), serif;
-  --font-kode-mono: var(--font-kode-mono), monospace;
+  --font-notable: var(--font-notable), monospace;
   --font-sans: var(--font-kode-mono), monospace;
-
+  --font-cabinet-thin: 'CabinetGrotesk-Thin', sans-serif;
+  --font-cabinet-extralight: 'CabinetGrotesk-Extralight', sans-serif;
+  --font-cabinet-light: 'CabinetGrotesk-Light', sans-serif;
+  --font-cabinet-regular: 'CabinetGrotesk-Regular', sans-serif;
+  --font-cabinet-medium: 'CabinetGrotesk-Medium', sans-serif;
+  --font-cabinet-bold: 'CabinetGrotesk-Bold', sans-serif;
+  --font-cabinet-extrabold: 'CabinetGrotesk-Extrabold', sans-serif;
+  --font-cabinet-black: 'CabinetGrotesk-Black', sans-serif;
+  --font-cabinet-variable: 'CabinetGrotesk-Variable', sans-serif;
+  --font-cabinet-variable--font-variation-settings: 'wght' 400;
+  
+  --font-y224: 'y224', sans-serif;
   --animate-ping: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
   
 }
@@ -51,26 +62,27 @@
   ::selection { background: rgba(255, 255, 255, 0.1); }
 
   img { image-rendering: optimizeQuality; }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cabinet-variable text-color;
+  }
 }
 
 /* ----------------- Components ----------------- */
 @layer components {
-  .set-top-left-corner {
-    @apply relative top-0 left-0 before:content-[''] after:absolute after:top-0 after:left-0 after:w-auto after:aspect-square after:h-1/2 after:bg-soft
-             after:border-r after:border-color after:rotate-45 after:-translate-x-1/2 after:-translate-y-1/2 ;
-  }
+  
 
   .btn {
-    @apply bg-color border border-color font-normal text-white text-center 
-           py-1 px-8  transition-colors duration-300 ease-in-out 
-             max-w-96 hover:bg-transparent hover:text-color; 
+    @apply bg-color border border-color text-white text-center 
+           py-1 px-6  transition-colors duration-300 ease-in-out 
+             max-w-96 hover:bg-transparent hover:text-color rounded-full; 
             /* hover:bg-transparent hover:text-color */
   }
   .btn-secondary {
-    @apply border border-color font-normal text-color bg-transparent text-center 
+    @apply border border-color  text-color bg-transparent text-center 
            py-1 px-8  transition-colors duration-300 ease-in-out 
-             max-w-96 ; 
-            /* hover:bg-transparent hover:text-color */
+             max-w-96 rounded-full hover:bg-transparent hover:text-color; 
+            /*  */
   }
   
   
