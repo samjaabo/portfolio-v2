@@ -11,6 +11,8 @@ import BackgroundMusic from "../audio";
 import { HiOutlineQueueList } from "react-icons/hi2";
 import { LinkButton } from "../decryptedTextEffect";
 import TypingText from "../typingAnimation";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { TbMenu4 } from "react-icons/tb";
 
 export default function HeaderSection() {
   return (
@@ -45,21 +47,21 @@ export default function HeaderSection() {
 
           {/* for smart devices */}
           <button className="lg:hidden inline-block cursor-pointer">
-            <HiOutlineQueueList className="w-8 h-8" />
+            <TbMenu4 className="w-8 h-8 border rounded-full" />
           </button>
         </div>
         <div className="relative z-8 w-full flex lg:flex-row flex-col items-start justify-between p-8 pt-22 lg:p-16 lg:pt-32">
           <div className="z-20 lg:max-w-xs max-lg:ml-auto  flex gap-2 items-baseline">
             {/* <div className="h-2 w-2 aspect-square rounded-0 border border-line-color-soft animate-ping"></div> */}
             <p className="">
-              Full-Stack Developer & UI/UX Designer — building modern web apps
+              Full-Stack Developer & UI/UX Designer building modern web apps
               where clean code meets elegant interfaces.
             </p>
           </div>
           <div className="z-20 lg:max-w-xs max-lg:ml-auto  flex gap-2 items-baseline">
             {/* <div className="h-2 w-2 aspect-square rounded-0 border border-line-color-soft animate-ping"></div> */}
             <p className="">
-              Specialized in Next.js, React, Tailwind, and Supabase — creating
+              Specialized in Next.js, React, Tailwind, and Supabase creating
               scalable, fast, and seamless digital experiences.
             </p>
           </div>
@@ -75,8 +77,8 @@ export default function HeaderSection() {
               <p className="">
                 I turn ideas into functional, visually compelling applications.
                 From design to deployment, I focus on user-centered UI/UX, clean
-                architecture, and scalable full-stack development — ensuring
-                every project looks great and runs smoothly.
+                architecture, and scalable full-stack development ensuring every
+                project looks great and runs smoothly.
               </p>
 
               <LinkButton href="#about">Explore My Projects</LinkButton>
@@ -104,11 +106,11 @@ export default function HeaderSection() {
             </div>
           </div>
           <div className="flex-1 order-2 max-lg:order-1 max-lg:w-full items-stretch ">
-            <div className="max-h-full overflow-hidden w-full h-full bg-soft p-8 rounded-xl  border border-line-color-soft flex items-center justify-center">
+            <div className="max-h-full overflow-hidden w-full h-full bg-soft rounded-xl  border border-soft flex items-center justify-center">
               <img
-                src="/futuristic/ui-ux.png"
+                src="/futuristic/ui-ux-2.png"
                 alt=""
-                className="object-cover "
+                className="object-cover rounded-xl w-full h-full"
               />
             </div>
           </div>

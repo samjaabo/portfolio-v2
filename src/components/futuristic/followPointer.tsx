@@ -37,7 +37,7 @@ export default function Drag() {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 z-50 w-2 h-2 border-dashed border border-white bg-transparent pointer-events-none mix-blend-difference"
+      className="hidden lg:inline-block fixed top-0 left-0 z-50 w-2 h-2 border-dashed border border-white bg-transparent pointer-events-none mix-blend-difference"
       ref={ref}
       style={{
         x,
@@ -66,18 +66,3 @@ function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
 
   return { x, y };
 }
-
-const ball = {
-  width: 8,
-  height: 8,
-  backgroundColor: "transparent",
-  border: "1px dashed var(--color-white, #fff)",
-  //   outline: "1px solid var(--color-white) ",
-  //   borderRadius: "50%",
-  position: "fixed" as const,
-  top: 0,
-  left: 0,
-  pointerEvents: "none",
-  zIndex: 9999,
-  mixBlendMode: "difference" as const,
-};

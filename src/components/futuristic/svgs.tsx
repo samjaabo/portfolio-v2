@@ -73,7 +73,7 @@ export function FullCard() {
 export function NavbarContainer() {
   return (
     <svg
-      className="absolute w-full max-md:w-1/3 max-md: lg:h-20 max-h-12 left-1/2 -translate-x-1/2  top-0 pointer-events-none z-1"
+      className="absolute w-full max-md:w-1/3 max-md: lg:h-20 max-h-12 left-1/2 -translate-x-1/2  top-[-2px] pointer-events-none z-1"
       width="100%"
       viewBox="0 0 879 87"
       fill="none"

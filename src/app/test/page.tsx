@@ -16,10 +16,15 @@ import CursusSection from "@/components/futuristic/sections/cursus";
 import Drag from "@/components/futuristic/followPointer";
 import BlogSection from "@/components/futuristic/sections/blog";
 import Footer from "@/components/futuristic/sections/footer";
+import { LiaCodeSolid } from "react-icons/lia";
 
 export default function TestPage() {
   return (
     <main className="relative flex flex-col items-center justify-start min-h-screen h-auto bg-white w-full max-w-[120rem] mx-auto">
+      <div className="bg-warning w-full text-center text-soft px-2 lg:px-8 ">
+        <LiaCodeSolid className="inline-block" /> sorry this website is under
+        development
+      </div>
       <Drag />
       <HeaderSection />
       <ProjectsSection />

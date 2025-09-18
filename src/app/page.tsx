@@ -13,6 +13,9 @@ import Link from "next/link";
 export default function TestPage() {
   return (
     <main className="relative flex flex-col items-center justify-center min-h-screen h-screen bg-white px-2 md:px-8 w-full max-w-[120rem] mx-auto">
+      <div className="bg-warning w-full text-center ">
+        sorry we are in development
+      </div>
       <div
         className={clsx(
           "relative flex h-1/2 w-1/2 bg-soft",
