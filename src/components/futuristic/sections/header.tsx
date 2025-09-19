@@ -1,18 +1,14 @@
 import Link from "next/link";
 import {
   CardBottomContainer,
-  FuturisticButton,
-  ListIcon,
   NavbarContainer,
   NavbarContainerRounded,
   WebsiteLogo,
 } from "../svgs";
 import BackgroundMusic from "../audio";
-import { HiOutlineQueueList } from "react-icons/hi2";
 import { LinkButton } from "../decryptedTextEffect";
-import TypingText from "../typingAnimation";
-import { CgMenuRightAlt } from "react-icons/cg";
 import { TbMenu4 } from "react-icons/tb";
+import Bg360 from "../ui/photoSphereViewer";
 
 export default function HeaderSection() {
   return (
@@ -20,7 +16,8 @@ export default function HeaderSection() {
       id="explore"
       className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full"
     >
-      <div className="relative  top-0 left-0  flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
+      {/* <Bg360 /> */}
+      <div className="overflow-hidden relative  top-0 left-0  flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
         <NavbarContainer />
         <NavbarContainerRounded />
         <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-9 w-fit h-8 pt-1.5 flex items-center justify-center gap-2 lg:gap-8">
@@ -106,12 +103,14 @@ export default function HeaderSection() {
             </div>
           </div>
           <div className="flex-1 order-2 max-lg:order-1 max-lg:w-full items-stretch ">
-            <div className="max-h-full overflow-hidden w-full h-full bg-soft rounded-xl  border border-soft flex items-center justify-center">
-              <img
+            <div className="max-h-full overflow-hidden w-full h-full bg-soft/0 rounded-xl  flex items-center justify-center">
+              {/* <img
                 src="/futuristic/ui-ux-2.png"
                 alt=""
                 className="object-cover rounded-xl w-full h-full"
-              />
+              /> */}
+
+              <Bg360 />
             </div>
           </div>
         </div>

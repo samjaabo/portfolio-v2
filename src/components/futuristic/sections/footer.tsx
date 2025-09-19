@@ -102,12 +102,12 @@ export default function Footer() {
         {/* <div className="flex justify-end lg:col-span-2">payements</div> */}
         {/* row 1 */}
         <div className="flex lg:col-span-2 items-baseline lg:justify-start justify-center">
-          © StarterBase | {new Date().getFullYear()} | All rights reserved
+          © Said Amjaabou | {new Date().getFullYear()} | All rights reserved
         </div>
         <div className="flex lg:justify-end lg:col-span-2 uppercase justify-center">
           POWERED BY:{" "}
           <a href="#" className="underline-link">
-            StarterBBase
+            Said Amjaabou
           </a>{" "}
           work
         </div>

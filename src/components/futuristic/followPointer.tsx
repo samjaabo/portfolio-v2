@@ -1,5 +1,6 @@
 "use client";
 
+import clsx from "clsx";
 import { motion, useSpring } from "framer-motion";
 import { RefObject, useEffect, useRef, useState } from "react";
 
@@ -37,7 +38,10 @@ export default function Drag() {
 
   return (
     <motion.div
-      className="hidden lg:inline-block fixed top-0 left-0 z-50 w-2 h-2 border-dashed border border-white bg-transparent pointer-events-none mix-blend-difference"
+      className={clsx(
+        "hidden lg:inline-block fixed top-0 left-0 z-50 w-2 h-2 bg-transparent pointer-events-none mix-blend-difference",
+        "outline outline-white outline-offset-4 border border-white  "
+      )}
       ref={ref}
       style={{
         x,

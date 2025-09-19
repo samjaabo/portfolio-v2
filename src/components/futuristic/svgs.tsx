@@ -12,6 +12,7 @@ export function CardBottomContainer() {
         clipRule="evenodd"
         d="M228 0V28c0 5.5-4.5 10-10 10H46c-3 0-5.8-1.3-7.7-3.7L13.2 3.7C11.3 1.3 8.5 0 5.5 0H228 0s0 0 228 0z"
         fill="var(--color-soft)"
+        // fillOpacity={0}
       ></path>
     </svg>
   );
