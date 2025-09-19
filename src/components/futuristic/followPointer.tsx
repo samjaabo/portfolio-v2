@@ -8,17 +8,30 @@ export default function Drag() {
   const ref = useRef<HTMLDivElement>(null);
   const { x, y } = useFollowPointer(ref);
   const [visible, setVisible] = useState(true);
+  const [clicked, setClicked] = useState(false);
 
   const lastMoveRef = useRef(Date.now());
 
   // Update last movement timestamp
   useEffect(() => {
+    const handlePointerClick = () => {
+      setClicked(true);
+      setTimeout(() => setClicked(false), 500);
+      lastMoveRef.current = Date.now();
+      if (!visible) setVisible(true);
+    };
     const handlePointerMove = () => {
       lastMoveRef.current = Date.now();
       if (!visible) setVisible(true);
     };
     window.addEventListener("pointermove", handlePointerMove);
-    return () => window.removeEventListener("pointermove", handlePointerMove);
+    window.addEventListener("click", handlePointerClick, {
+      passive: true,
+    });
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("click", handlePointerClick);
+    };
   }, [visible]);
 
   // Efficient loop to hide after inactivity
@@ -26,7 +39,7 @@ export default function Drag() {
     let animFrame: number;
 
     const checkIdle = () => {
-      if (Date.now() - lastMoveRef.current > 500) {
+      if (Date.now() - lastMoveRef.current > 300) {
         setVisible(false);
       }
       animFrame = requestAnimationFrame(checkIdle);
@@ -39,8 +52,11 @@ export default function Drag() {
   return (
     <motion.div
       className={clsx(
-        "hidden lg:inline-block fixed top-0 left-0 z-50 w-2 h-2 bg-transparent pointer-events-none mix-blend-difference",
-        "outline outline-white outline-offset-4 border border-white  "
+        "w-3 h-3 hidden lg:inline-block fixed top-0 left-0 z-50  bg-transparent pointer-events-none after:absolute after:inset-0  after:rotate-45",
+        "after:outline after:outline-color  after:transition-all after:duration-300 ",
+        clicked && "after:w-2 after:h-2 ",
+        !clicked && "after:w-3 after:h-3",
+        "before:absolute before:inset-0 before:rotate-45  before:outline before:outline-offset-8 before:outline-line-color-soft"
       )}
       ref={ref}
       style={{
