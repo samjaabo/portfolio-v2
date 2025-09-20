@@ -13,33 +13,50 @@ import { TbMenu4 } from "react-icons/tb";
 import Bg360 from "../ui/photoSphereViewer";
 import { motion, useScroll, useTransform } from "framer-motion";
 import clsx from "clsx";
+import { SiTypescript } from "react-icons/si";
+import { SiReact } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss } from "react-icons/si";
+import { RiSupabaseFill } from "react-icons/ri";
+
+import { SiFramer } from "react-icons/si";
+import { SiFigma } from "react-icons/si";
+import { useEffect, useState } from "react";
 
 export default function HeaderSection() {
+  const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
   const { scrollY, scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  const rotate = useTransform(
+    scrollYProgress,
+    (v) => ((v % 0.1) / 0.1) * 360.0
+  );
 
-  console.log(width);
+  const HandleMobileMenuClick = () => {
+    setMobileMenuIsOpen(!mobileMenuIsOpen);
+  };
+
+  useEffect(() => {
+    document.body.classList.toggle("max-lg:overflow-hidden", mobileMenuIsOpen);
+  }, [mobileMenuIsOpen]);
+
   return (
     <section
       id="explore"
-      className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white sm:px-5 w-full"
+      className="max-sm:p-1 relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white sm:px-5 w-full"
     >
       <div
         className={clsx(
-          "z-90 fixed top-0 left-1/2 -translate-x-1/2 h-1 w-full max-w-[120rem] xl:px-5 bg-transparent"
+          "z-90 fixed top-0 left-1/2 -translate-x-1/2 h-1 w-full max-w-[120rem] xl:px-5 bg-transparent pointer-events-none"
         )}
       >
         <motion.div
-          className={clsx(
-            "relative h-full bg-bg",
-            "after:absolute after:content-[''] after:z-91 after:right-0 after:top-0 after:h-full after:aspect-square after:w-auto",
-            "after:border after:border-color after:translate-x-[calc(100%-1px)]"
-          )}
+          className={clsx("relative top-0 left-0 h-full bg-bg/50 rounded-full")}
           style={{ width }}
         />
       </div>
       {/* <Bg360 /> */}
-      <div className="overflow-hidden relative  top-0 left-0  flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
+      <div className="overflow-hidden relative  top-0 left-0  flex items-center justify-center  bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
         <NavbarContainer />
         <NavbarContainerRounded />
         <nav className="absolute top-0 left-1/2 -translate-x-1/2 z-9 w-fit h-8 pt-1.5 flex items-center justify-center gap-2 lg:gap-8">
@@ -61,19 +78,47 @@ export default function HeaderSection() {
           <BackgroundMusic />
         </Link>
         <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
-          <Link className="btn-secondary" href="#contact">
+          <Link
+            className="btn-secondary lg:inline-block hidden"
+            href="#contact"
+          >
             Contact
           </Link>
-          <Link className="btn" href="#work">
+          <Link className="btn  lg:inline-block hidden" href="#work">
             View Work
           </Link>
 
           {/* for smart devices */}
-          <button className="lg:hidden inline-block cursor-pointer">
-            <TbMenu4 className="w-8 h-8 border rounded-full" />
-          </button>
+          {!mobileMenuIsOpen && (
+            <button
+              onClick={HandleMobileMenuClick}
+              className="lg:hidden inline-block cursor-pointer  h-8 w-auto my-auto border"
+            >
+              [/ Menu]
+            </button>
+          )}
+          {mobileMenuIsOpen && (
+            <div className="z-999 fixed blcok lg:hidden inset-0 w-full h-full px-5 py-2  bg-white ">
+              <div className="w-full h-full flex items-start justify-between rounded-xl p-4 bg-soft">
+                <div className="h-full w-fit">
+                  <Link className="flex gap-6" href={"/test"}>
+                    <WebsiteLogo></WebsiteLogo>
+                    {/* <BackgroundMusic /> */}
+                  </Link>
+                </div>
+                <div className="h-full w-fit">
+                  <button
+                    onClick={HandleMobileMenuClick}
+                    className="lg:hidden inline-block cursor-pointer h-8 w-auto my-auto  border"
+                  >
+                    [/ Close]
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-        <div className="relative z-8 w-full flex lg:flex-row flex-col items-start justify-between p-8 pt-22 lg:p-16 lg:pt-32">
+        <div className="relative z-8 w-full flex lg:flex-row flex-col items-start justify-between p-8 pt-22 lg:p-16 lg:pt-32 max-lg:pb-0">
           <div className="z-20 lg:max-w-xs max-lg:ml-auto  flex gap-2 items-baseline">
             {/* <div className="h-2 w-2 aspect-square rounded-0 border border-line-color-soft animate-ping"></div> */}
             <p className="">
@@ -131,14 +176,36 @@ export default function HeaderSection() {
             </div>
           </div>
           <div className="flex-1 order-2 max-lg:order-1 max-lg:w-full items-stretch ">
-            <div className="max-h-full overflow-hidden w-full h-full bg-soft/0 rounded-xl  flex items-center justify-center">
+            <div className="relative bg-bg text-soft max-h-full overflow-hidden w-full h-full rounded-xl  flex items-start justify-start">
               {/* <img
-                src="/futuristic/ui-ux-2.png"
-                alt=""
+                src="/futuristic/3d-imgs/Scifi_Concept_Art.jpg"
+                alt="Scifi_Concept_Art"
                 className="object-cover rounded-xl w-full h-full"
               /> */}
+              {/* <div className="absolute w-16 h-16 bottom-0 left-0 rotate-45 -translate-x-1/2 translate-y-1/2 bg-soft"></div> */}
+              <div className="grid lg:grid-cols-1 grid-cols-2 gap-4 p-4">
+                <div>
+                  <h3 className="text-inherit">Frontend</h3>
+                  <p>React, Next.js, TypeScript, TailwindCSS, Supabase</p>
+                </div>
+                <div>
+                  <h3 className="text-inherit">UI/UX</h3>
+                  <p>Figma, Wireframing, Prototyping, Accessibility</p>
+                </div>
+                <div className="flex gap-4">
+                  {/* <h3 className="text-inherit">UI/UX</h3> */}
+                  <SiTypescript />
+                  <SiReact />
+                  <SiNextdotjs />
+                  <SiTailwindcss />
+                  <RiSupabaseFill />
 
-              <Bg360 />
+                  <SiFramer />
+                  <SiFigma />
+                </div>
+              </div>
+
+              {/* <Bg360 /> */}
             </div>
           </div>
         </div>
