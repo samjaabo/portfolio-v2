@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   CardBottomContainer,
@@ -9,13 +11,33 @@ import BackgroundMusic from "../audio";
 import { LinkButton } from "../decryptedTextEffect";
 import { TbMenu4 } from "react-icons/tb";
 import Bg360 from "../ui/photoSphereViewer";
+import { motion, useScroll, useTransform } from "framer-motion";
+import clsx from "clsx";
 
 export default function HeaderSection() {
+  const { scrollY, scrollYProgress } = useScroll();
+  const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+
+  console.log(width);
   return (
     <section
       id="explore"
-      className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-2 lg:px-8 w-full"
+      className=" relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white sm:px-5 w-full"
     >
+      <div
+        className={clsx(
+          "z-90 fixed top-0 left-1/2 -translate-x-1/2 h-1 w-full max-w-[120rem] xl:px-5 bg-transparent"
+        )}
+      >
+        <motion.div
+          className={clsx(
+            "relative h-full bg-bg",
+            "after:absolute after:content-[''] after:z-91 after:right-0 after:top-0 after:h-full after:aspect-square after:w-auto",
+            "after:border after:border-color after:translate-x-[calc(100%-1px)]"
+          )}
+          style={{ width }}
+        />
+      </div>
       {/* <Bg360 /> */}
       <div className="overflow-hidden relative  top-0 left-0  flex items-center justify-center bg-soft w-full h-fit rounded-t-xl mt-2 lg:mt-8">
         <NavbarContainer />
@@ -39,8 +61,12 @@ export default function HeaderSection() {
           <BackgroundMusic />
         </Link>
         <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
-          <LinkButton href="#about">Contact</LinkButton>
-          <LinkButton href="#about">View Work</LinkButton>
+          <Link className="btn-secondary" href="#contact">
+            Contact
+          </Link>
+          <Link className="btn" href="#work">
+            View Work
+          </Link>
 
           {/* for smart devices */}
           <button className="lg:hidden inline-block cursor-pointer">
@@ -78,7 +104,9 @@ export default function HeaderSection() {
                 project looks great and runs smoothly.
               </p>
 
-              <LinkButton href="#about">Explore My Projects</LinkButton>
+              <Link className="btn-secondary" href="#about">
+                Explore My Projects
+              </Link>
 
               {/* <div className="flex gap-2 lg:gap-8">
                 <ol>
