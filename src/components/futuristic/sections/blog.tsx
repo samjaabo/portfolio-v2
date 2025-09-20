@@ -79,7 +79,7 @@ export default function BlogSection() {
             development.
           </p>
         </div>
-        <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block max-sm:my-32">
+        <div className="relative top-0 -left-8 h-px bg-gray/25 w-[calc(100%+4rem)] hidden max-sm:block max-sm:my-24">
           <span className="hidden">center vertical line</span>
         </div>
         <div className="overflow-visible flex-1 items-stretch justify-center flex flex-col gap-4 px-1 sm:px-8 lg:px-16  h-fit">

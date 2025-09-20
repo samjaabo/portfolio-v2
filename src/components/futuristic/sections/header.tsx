@@ -43,7 +43,7 @@ export default function HeaderSection() {
   return (
     <section
       id="explore"
-      className="max-sm:p-1 relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white sm:px-5 w-full"
+      className="relative top-0 left-0 flex flex-col items-center justify-start h-fit bg-white px-1  sm:px-5 w-full"
     >
       <div
         className={clsx(
@@ -92,24 +92,23 @@ export default function HeaderSection() {
           {!mobileMenuIsOpen && (
             <button
               onClick={HandleMobileMenuClick}
-              className="lg:hidden inline-block cursor-pointer  h-8 w-auto my-auto border"
+              className="lg:hidden inline-block cursor-pointer  h-8 w-auto my-auto"
             >
               [/ Menu]
             </button>
           )}
           {mobileMenuIsOpen && (
-            <div className="z-999 fixed blcok lg:hidden inset-0 w-full h-full px-5 py-2  bg-white ">
+            <div className="z-999 fixed blcok lg:hidden inset-0 w-full h-full p-1 sm:px-5 py-2  bg-white ">
               <div className="w-full h-full flex items-start justify-between rounded-xl p-4 bg-soft">
                 <div className="h-full w-fit">
-                  <Link className="flex gap-6" href={"/test"}>
+                  <Link className="" href={"/test"}>
                     <WebsiteLogo></WebsiteLogo>
-                    {/* <BackgroundMusic /> */}
                   </Link>
                 </div>
                 <div className="h-full w-fit">
                   <button
                     onClick={HandleMobileMenuClick}
-                    className="lg:hidden inline-block cursor-pointer h-8 w-auto my-auto  border"
+                    className="lg:hidden inline-block cursor-pointer h-8 w-auto my-auto "
                   >
                     [/ Close]
                   </button>
@@ -152,38 +151,17 @@ export default function HeaderSection() {
               <Link className="btn-secondary" href="#about">
                 Explore My Projects
               </Link>
-
-              {/* <div className="flex gap-2 lg:gap-8">
-                <ol>
-                  <li>
-                    <h2 className="text-xl font-bold">New-learner</h2>
-                  </li>
-                  <li>Feature 2</li>
-                  <li>Feature 3</li>
-                  <li>Feature 4</li>
-                  <li>Feature 5</li>
-                </ol>
-                <ol>
-                  <li>
-                    <h2 className="text-xl font-bold">Mastering Web</h2>
-                  </li>
-                  <li>Feature 2</li>
-                  <li>Feature 3</li>
-                  <li>Feature 4</li>
-                  <li>Feature 5</li>
-                </ol>
-              </div> */}
             </div>
           </div>
           <div className="flex-1 order-2 max-lg:order-1 max-lg:w-full items-stretch ">
-            <div className="relative bg-bg text-soft max-h-full overflow-hidden w-full h-full rounded-xl  flex items-start justify-start">
+            <div className="relative top-0 left-0 bg-bg text-soft max-h-full overflow-hidden w-full h-full rounded-xl  flex items-start justify-start">
               {/* <img
                 src="/futuristic/3d-imgs/Scifi_Concept_Art.jpg"
                 alt="Scifi_Concept_Art"
                 className="object-cover rounded-xl w-full h-full"
               /> */}
               {/* <div className="absolute w-16 h-16 bottom-0 left-0 rotate-45 -translate-x-1/2 translate-y-1/2 bg-soft"></div> */}
-              <div className="grid lg:grid-cols-1 grid-cols-2 gap-4 p-4">
+              <div className="grid lg:grid-cols-1 grid-cols-2 gap-4 p-4 pb-14">
                 <div>
                   <h3 className="text-inherit">Frontend</h3>
                   <p>React, Next.js, TypeScript, TailwindCSS, Supabase</p>
@@ -192,17 +170,16 @@ export default function HeaderSection() {
                   <h3 className="text-inherit">UI/UX</h3>
                   <p>Figma, Wireframing, Prototyping, Accessibility</p>
                 </div>
-                <div className="flex gap-4">
-                  {/* <h3 className="text-inherit">UI/UX</h3> */}
-                  <SiTypescript />
-                  <SiReact />
-                  <SiNextdotjs />
-                  <SiTailwindcss />
-                  <RiSupabaseFill />
-
-                  <SiFramer />
-                  <SiFigma />
-                </div>
+              </div>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 w-full grid lg:grid-cols-7 grid-cols-7 gap-4">
+                {/* <h3 className="text-inherit">UI/UX</h3> */}
+                <SiTypescript className="w-5 h-5 mx-auto" />
+                <SiReact className="w-5 h-5 mx-auto" />
+                <SiNextdotjs className="w-5 h-5 mx-auto" />
+                <SiTailwindcss className="w-5 h-5 mx-auto" />
+                <RiSupabaseFill className="w-5 h-5 mx-auto" />
+                <SiFramer className="w-5 h-5 mx-auto" />
+                <SiFigma className="w-5 h-5 mx-auto" />
               </div>
 
               {/* <Bg360 /> */}
