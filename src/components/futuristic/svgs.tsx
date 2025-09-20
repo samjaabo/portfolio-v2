@@ -74,11 +74,12 @@ export function FullCard() {
 export function NavbarContainer() {
   return (
     <svg
-      className="lg:inline-block hidden  absolute w-full max-md:w-1/3 max-md: lg:h-20 max-h-12 left-1/2 -translate-x-1/2  top-[-2px] pointer-events-none z-1"
+      className="lg:inline-block hidden  absolute w-96 h-20  max-h-12 left-1/2 -translate-x-1/2  top-[-2px] pointer-events-none z-1"
       width="100%"
       viewBox="0 0 879 87"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
     >
       <path
         fillRule="evenodd"

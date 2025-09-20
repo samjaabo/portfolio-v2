@@ -77,7 +77,7 @@ export default function HeaderSection() {
           <WebsiteLogo></WebsiteLogo>
           <BackgroundMusic />
         </Link>
-        <div className="absolute m-4 gap-4 lg:gap-8 top-0 right-0 z-10 flex justify-between">
+        <div className="absolute m-4 gap-4 top-0 right-0 z-10 flex justify-between">
           <Link
             className="btn-secondary lg:inline-block hidden"
             href="#contact"
