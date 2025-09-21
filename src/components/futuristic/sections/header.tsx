@@ -92,18 +92,64 @@ export default function HeaderSection() {
           {!mobileMenuIsOpen && (
             <button
               onClick={HandleMobileMenuClick}
-              className="lg:hidden inline-block cursor-pointer  h-8 w-auto my-auto"
+              className="lg:hidden inline-block cursor-pointer  h-8 w-auto my-"
             >
               [/ Menu]
             </button>
           )}
           {mobileMenuIsOpen && (
-            <div className="z-999 fixed blcok lg:hidden inset-0 w-full h-full p-1 sm:px-5 py-2  bg-white ">
-              <div className="w-full h-full flex items-start justify-between rounded-xl p-4 bg-soft">
+            <div className="z-999 fixed block lg:hidden inset-0 w-full h-full p-1 sm:px-5 py-2  bg-soft ">
+              <div className="w-full h-full flex items-start justify-between rounded-xl p-4 bg-soft  duration-500">
                 <div className="h-full w-fit">
                   <Link className="" href={"/test"}>
                     <WebsiteLogo></WebsiteLogo>
                   </Link>
+                  <div className="flex flex-col mt-8 gap-2">
+                    <div className="relative flex">
+                      <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
+                      <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
+                      <Link
+                        onClick={HandleMobileMenuClick}
+                        className="underline-link-pretty ml-8"
+                        href="#explore"
+                      >
+                        Home
+                      </Link>
+                    </div>
+                    <div className="relative flex">
+                      <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
+                      <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
+                      <Link
+                        onClick={HandleMobileMenuClick}
+                        className="underline-link-pretty ml-8"
+                        href="#explore"
+                      >
+                        Work
+                      </Link>
+                    </div>
+                    <div className="relative flex">
+                      <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
+                      <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
+                      <Link
+                        onClick={HandleMobileMenuClick}
+                        className="underline-link-pretty ml-8"
+                        href="#explore"
+                      >
+                        About
+                      </Link>
+                    </div>
+                    <div className="relative flex">
+                      <div className="absolute top-2 left-2 w-1.5 h-1.5 bg-line-color-soft"></div>
+                      <div className="absolute top-[0.56275rem] left-4 w-1 h-1 border border-line-color-soft"></div>
+                      <Link
+                        onClick={HandleMobileMenuClick}
+                        className="underline-link-pretty ml-8"
+                        href="#explore"
+                      >
+                        Contact
+                      </Link>
+                    </div>
+                  </div>
                 </div>
                 <div className="h-full w-fit">
                   <button

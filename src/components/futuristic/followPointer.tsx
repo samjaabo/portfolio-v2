@@ -53,7 +53,7 @@ export default function Drag() {
     <motion.div
       className={clsx(
         "w-3 h-3 hidden lg:inline-block fixed top-0 left-0 z-50  bg-transparent pointer-events-none after:absolute after:inset-0  after:rotate-45",
-        "after:outline after:outline-color  after:transition-all after:duration-300 ",
+        "after:outline after:outline-color  after:transition-all after:duration-300 before:duration-400 before:transition-all",
         clicked && "after:w-2 after:h-2 ",
         !clicked && "after:w-3 after:h-3",
         "before:absolute before:inset-0 before:rotate-45  before:outline before:outline-offset-8 before:outline-line-color-soft"
